@@ -2,7 +2,7 @@
 
 xhost +local:docker
 
-docker rm -f uav_nav
+docker rm -f uav_nav_test
 docker run --device=/dev/dri:/dev/dri \
             -e DISPLAY=unix:0 \
             -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -10,5 +10,5 @@ docker run --device=/dev/dri:/dev/dri \
             --device-cgroup-rule='c 13:* rmw' \
             -v $(pwd):/uav_nav_ws \
             -it \
-            --name uav_nav \
-            uav_nav
+            --name uav_nav_test \
+            ybarichev/my_uav:pure
