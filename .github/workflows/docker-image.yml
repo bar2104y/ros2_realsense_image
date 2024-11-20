@@ -1,18 +1,24 @@
-name: Docker Image CI
+name: publics image to DockerHub
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  [workflow_dispatch]
+  # push:
+  #   branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
 
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: ./build_to_dockerhub.sh
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Build Image
+        run: ./build_to_dockerhub.sh
+      
+      - name: push imgage to DockerHub
+        run:
+          docker push ybarichev/my_uav:pure

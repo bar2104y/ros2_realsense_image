@@ -14,25 +14,7 @@ apt install -y nano \
                ros-humble-pcl-ros
 
 
-# # Установка quill
-# mkdir /downloads
-# cd /downloads
-# git clone https://github.com/odygrd/quill.git
-# cd quill
-# git checkout tags/v5.1.0
 
-# mkdir cmake_build
-# cd cmake_build
-# cmake ..
-# make install
-
-# cd /downloads
-# git clone https://github.com/yse/easy_profiler.git
-# cd easy_profiler
-# mkdir build
-# cd build
-# cmake -DCMAKE_BUILD_TYPE="Release" ..
-# make install
 
 
 source /opt/ros/humble/setup.bash
