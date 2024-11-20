@@ -5,7 +5,7 @@ COPY . /uav_nav_ws
 WORKDIR /uav_nav_ws
 
 RUN ./scripts/config.sh
-# RUN ./quill5.sh
-RUN ./easy_profiler.sh
+# RUN ./scripts/quill5.sh
+RUN ./scripts/easy_profiler.sh
 
 CMD [ "bash" ]
