@@ -21,4 +21,5 @@ jobs:
       
       - name: push imgage to DockerHub
         run:
+          docker login -u ybarichev -p ${{secrets.DOCKER_HUB_TOCKEN}}
           docker push ybarichev/my_uav:pure
